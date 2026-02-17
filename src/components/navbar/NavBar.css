@@ -1,0 +1,12 @@
+.pointer{
+    cursor: pointer;
+}
+
+.navbar{
+    background-color: white;
+    border: 3px solid blue;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
