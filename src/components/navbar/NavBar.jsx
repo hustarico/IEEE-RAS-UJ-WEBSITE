@@ -1,5 +1,6 @@
 import './NavBar.css'
-import logo from '../../assets/IEEE-RAS/IEEE_RAS_logo_colored.png'
+// import logo from '../../assets/IEEE-RAS/IEEE_RAS_logo_colored.png'
+import logo from '../../assets/IEEE-RAS/ras-logo-custom1.png'
 
 const NavLinks = [
     {

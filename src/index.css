@@ -1,8 +1,14 @@
 :root{
-    
+    --bg-dark:   #0a0a0a;
+    --ras-maroon:#98002e;
+    --ras-maroon-hover:#700022;
+    --ras-purple:#662D91;
+    --text-pure: #ffffff;
+    --text-muted:#a0a0a0;
 }
 *{
     scroll-behavior: smooth;
+    font-family: 'montserrat';
 }
 
 body{
@@ -11,6 +17,12 @@ body{
     margin: 0;
     padding: 0;
     border: 0;
+    background-color: var(--bg-dark);
+}
+
+main{
+    position: relative;
+    top: 0;
 }
 
 .app-container{

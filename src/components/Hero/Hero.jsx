@@ -2,11 +2,15 @@ import './Hero.css'
 
 export default function Hero(){
     return <section className="hero-section" id='home'>
-        <div className="hero-content">
-            <div className="hero-card">
+        <div className="hero-background">
 
-                <h1>welcome to ts</h1>
-                <h3>we're happy you joined us in ts</h3>
+            <div className="hero-content">
+                <div className="hero-card">
+
+                    <h1>IEEE<br/><span>RAS</span><br/>UJ</h1>
+                    <h3>Design. Build. Automate. Elevate.</h3>
+                    <button >join us</button>
+                </div>
             </div>
         </div>
     </section>
