@@ -1,5 +1,6 @@
 import NavBar from './components/navbar/NavBar.jsx'
 import Hero from './components/Hero/Hero.jsx'
+import About from './components/About/About-section/About.jsx'
 // import Footer from './components/Footer/Footer.jsx'
 
 import './index.css'
@@ -20,7 +21,8 @@ function App() {
 			</header>
 
 			<main>
-				<Hero></Hero>
+				<Hero/>
+				<About/>
 				{
 					brek(100)
 				}

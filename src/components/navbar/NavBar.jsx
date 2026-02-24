@@ -48,7 +48,7 @@ const NavLinks = [
     {
         name:"News",
         href:"#news"
-    }
+    },
 ]
 
 const SocialLinks = [
@@ -77,8 +77,8 @@ export default function NavBar(){
     return <div className='navbar'>
         
         <div className='logo-container'>
-            <a href="">
-                <img src={logo} alt="" />
+            <a href="#home">
+                <img src={logo} alt="IEEE RAS UJ LOGO" />
             </a>
         </div>
 
