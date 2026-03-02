@@ -15,7 +15,7 @@
     width: 100%;
     height: 100%;
     padding: 2rem;
-    padding-top: 5rem;
+    padding-top: 4rem;
 }
 
 .about-card{
@@ -28,11 +28,18 @@
     /* background: linear-gradient(135deg,rgba(152, 0, 46,0.6),var(--bg-dark)) padding-box,
                 linear-gradient(135deg, var(--ras-maroon), var(--ras-purple)) border-box; */
                 
-    border: 5px solid transparent;
+    border: 1px solid transparent;
     border-radius: 1rem;
 
     color: var(--text-pure);
 
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+    --spotlight-color: rgba(255, 255, 255, 0.05);
+
+}
+.about-card h2{
+    margin-top: 0;
 }
 .about-card p{
     color:var(--text-muted)
@@ -47,12 +54,29 @@
     transform: translateY(-5px);
 }
 
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 80%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+.about-card:hover::before,
+.about-card:focus-within::before {
+    opacity: 0.6;
+}
+
 .whoWeAre{
-    grid-area: 1/1/3/2;
+    grid-area: 2/1/4/2;
 }
 
 .stats{
-    grid-area:auto/1/auto/3;
+    grid-area:1/1/2/3;
     text-align: center;
 }
 
@@ -61,6 +85,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    gap: 1rem;
     
 
     list-style-type: none;
@@ -71,6 +96,7 @@
     border-radius: 1.5rem;
     /* border: 1px solid #222; */
     /* background-color: #111; */
+
     
     border: 1px solid transparent;
     background: linear-gradient(135deg,rgba(0, 0, 0,0.6),var(--bg-dark)) padding-box,
@@ -87,7 +113,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    flex: 1 1 150px;
+    max-width: 15%;
 }
+
 
 .card-spotlight::before {
     content: '';
@@ -107,7 +137,18 @@
     opacity: 0.6;
 }
 
-.card-spotlight p,h3{
+.card-spotlight p{
+    font-size: 1.5rem;
     margin: 0;
+}
+.card-spotlight h3{
+    margin: 0;
+    margin-bottom: 1rem;
+}
 
+.stats{
+    background: transparent; 
+}
+.stats:hover{
+    transform: none;
 }
