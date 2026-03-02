@@ -1,7 +1,7 @@
 import './Hero.css'
 import TextPressure from './TextPressure'
 
-import heroVideo from '../../assets/vidBg1.mp4'
+import heroVideo from '../../assets/vidBg2Compress.mp4'
 
 export default function Hero(){
     return <section className="hero-section" id='home'>
