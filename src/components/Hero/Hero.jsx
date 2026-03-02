@@ -11,7 +11,7 @@ export default function Hero(){
             </video>
 
             <div className="hero-content">
-                <div className="hero-card">
+                <div className="hero-card cursor-target">
 
                     {/* <h1>IEEE<br/><span>RAS</span><br/>UJ</h1> */}
                     <TextPressure

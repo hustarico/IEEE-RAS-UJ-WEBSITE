@@ -14,7 +14,7 @@ export default function Vision({spotlightColor = 'rgba(255, 255, 255, 0.25)' }){
         };
     
 
-    return <div className="about-card" ref={divRef} onMouseMove={handleMouseMove}>
+    return <div className="about-card cursor-target" ref={divRef} onMouseMove={handleMouseMove}>
         <h2>Our <span>Vision</span></h2>
         <p>To bridge the gap between lecture halls and industry floors. We don't just study robotics; we engineer the future. We build, we break, we innovate.</p>
     </div>

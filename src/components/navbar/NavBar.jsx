@@ -76,9 +76,9 @@ export default function NavBar(){
 
     return <div className='navbar'>
         
-        <div className='logo-container'>
+        <div className='logo-container '>
             <a href="#home">
-                <img src={logo} alt="IEEE RAS UJ LOGO" />
+                <img src={logo} alt="IEEE RAS UJ LOGO" className='cursor-target'/>
             </a>
         </div>
 
@@ -86,7 +86,7 @@ export default function NavBar(){
 
             <ul className='nav-links'>
                 {NavLinks.map(link=>{
-                    return <li key={link.name}><a href={link.href}>{link.name}</a></li>
+                    return <li key={link.name} className='cursor-target'><a href={link.href}>{link.name}</a></li>
                 })}
             </ul>
 
@@ -94,7 +94,7 @@ export default function NavBar(){
                 {
                     SocialLinks.map(link=>{
                         return (
-                            <a key={link.name} class="header__social-icon-wrapper" href={link.href} target="_blank" aria-label={link.ariaLabel}>
+                            <a key={link.name} class="header__social-icon-wrapper cursor-target" href={link.href} target="_blank" aria-label={link.ariaLabel}>
                                 <svg class="header__social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                                     <path fill="currentColor" d={link.svg}></path>
                                 </svg>

@@ -30,7 +30,7 @@ let StatsArray = [
 
 
 export default function Stats(){
-    return <div className={"about-card stats"}>
+    return <div className={"about-card stats "}>
         <h2>Us in <span>Numbers</span></h2>
         
         <ul>

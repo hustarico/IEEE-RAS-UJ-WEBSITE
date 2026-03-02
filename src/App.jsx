@@ -4,6 +4,7 @@ import About from './components/About/About.jsx'
 // import Footer from './components/Footer/Footer.jsx'
 
 import './index.css'
+import TargetCursor from './components/Cursor/TargetCursor.jsx'
 
 function brek(j){
 	let arr = []
@@ -16,6 +17,14 @@ function brek(j){
 function App() {
 
 		return <div className='app-container'>
+
+			<TargetCursor 
+				spinDuration={2}
+				hideDefaultCursor
+				parallaxOn
+				hoverDuration={0.2}
+			/>
+
 			<header>
 				<NavBar></NavBar>
 			</header>
