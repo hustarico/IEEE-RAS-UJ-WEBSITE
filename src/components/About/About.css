@@ -36,6 +36,7 @@
     --mouse-x: 50%;
     --mouse-y: 50%;
     --spotlight-color: rgba(255, 255, 255, 0.05);
+    overflow: clip;
 
 }
 .about-card h2{
@@ -78,12 +79,13 @@
 .stats{
     grid-area:1/1/2/3;
     text-align: center;
+    /* padding-bottom: 0; */
 }
 
 .stats > ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:space-around;
     align-items: center;
     gap: 1rem;
     
@@ -94,6 +96,7 @@
 .card-spotlight {
     position: relative;
     border-radius: 1.5rem;
+    box-sizing: border-box;
     /* border: 1px solid #222; */
     /* background-color: #111; */
 
@@ -151,4 +154,48 @@
 }
 .stats:hover{
     transform: none;
+}
+
+.team-container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.team-container h2{
+
+    text-transform: uppercase;
+    
+    color: var(--text-pure);
+    background: linear-gradient(135deg, var(--ras-maroon), var(--ras-purple)) text;
+    
+}
+.team-container h2>span{
+    
+    color: transparent;
+    background: linear-gradient(135deg, var(--ras-maroon), var(--ras-purple)) text;
+}
+
+
+.team-container > .cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.teams{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }

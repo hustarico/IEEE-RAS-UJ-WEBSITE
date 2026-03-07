@@ -20,7 +20,7 @@ function App() {
 
 			<TargetCursor 
 				spinDuration={2}
-				hideDefaultCursor
+				// hideDefaultCursor
 				parallaxOn
 				hoverDuration={0.2}
 			/>

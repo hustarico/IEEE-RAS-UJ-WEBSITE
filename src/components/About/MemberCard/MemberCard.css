@@ -1,0 +1,58 @@
+.member-card{
+    height: 20rem;
+    width :15rem;
+    /* border: 1px solid blue; */
+
+    border: 1px solid transparent;
+    background: linear-gradient(135deg,rgba(0, 0, 0,0.6),var(--bg-dark)) padding-box,
+                linear-gradient(135deg, var(--ras-maroon), var(--ras-purple)) border-box;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    box-sizing: border-box;
+    padding: 1rem;
+
+    border-radius: 1rem;
+}
+
+.member-card * {
+    padding: 0;
+    margin: 0;
+}
+
+.member-card img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.member-card > .img-container{
+    height: 100%;
+    width:  100%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.member-card h4{
+    color: var(--text-pure);
+}
+.member-card p{
+    color: var(--text-muted);
+}
+
+.member-card {
+    transition: transform 0.1s ease-out; /* Smooths the movement */
+    transform-style: preserve-3d; /* Allows child elements to also be 3D */
+    will-change: transform; /* Optimizes browser performance */
+    /* ... your other styles ... */
+}
+
+/* Optional: Make the image pop out even more */
+.member-card:hover img {
+    transform: translateZ(20px); /* Moves the image forward in 3D space */
+}
