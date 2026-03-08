@@ -4,6 +4,7 @@ import daNigga from "../../../assets/daNigga.png"
 
 
 
+
 export default function MemberCard({img=daNigga,name="da Nigga",title="our nigga"}) {
     const cardRef = useRef(null);
 

@@ -72,7 +72,34 @@ const SocialLinks = [
     },
 ]
 
+const navLinks = <ul className='nav-links'>
+                    {NavLinks.map(link=>{
+                        return <li key={link.name} className='cursor-target'><a href={link.href}>{link.name}</a></li>
+                    })}
+                </ul>;
+
+
+const socialLinks = <div className="social-links">
+                {
+                    SocialLinks.map(link=>{
+                        return (
+                            <a key={link.name} className="header__social-icon-wrapper cursor-target" href={link.href} target="_blank" aria-label={link.ariaLabel}>
+                                <svg className="header__social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d={link.svg}></path>
+                                </svg>
+                            </a>
+                        )
+                    })
+                }
+                
+            </div>;
+
+            
+
 export default function NavBar(){
+
+    const viewportWidth = window.innerWidth;
+    const viewportThreshold = 700;
 
     return <div className='navbar'>
         
@@ -82,28 +109,20 @@ export default function NavBar(){
             </a>
         </div>
 
-        {/* <div className="nav-actions"> */}
 
-            <ul className='nav-links'>
-                {NavLinks.map(link=>{
-                    return <li key={link.name} className='cursor-target'><a href={link.href}>{link.name}</a></li>
-                })}
-            </ul>
+{//? thisis an attempt at reponsive navbar that goes into burger menu on mobile, 
+//? not best, issues include if navlinks and socials aren't renders, flex handling worsens, 
+//? we could giving them a display none?
+//? we could just add the burger menu button with exact height, 
+//? nothing much going on around here, but this dones't seem like the correct way to go about it
 
-            <div className="social-links">
-                {
-                    SocialLinks.map(link=>{
-                        return (
-                            <a key={link.name} class="header__social-icon-wrapper cursor-target" href={link.href} target="_blank" aria-label={link.ariaLabel}>
-                                <svg class="header__social-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d={link.svg}></path>
-                                </svg>
-                            </a>
-                        )
-                    })
-                }
-                
-            </div>
-        {/* </div> */}
+//todo whaaaa @-@', move shit to css i guess? mediaquery=>display:none typa thing -_- hmmm
+}
+
+            {viewportWidth>viewportThreshold&& navLinks}
+
+            {viewportWidth>viewportThreshold&&socialLinks}
+
+            {viewportWidth<viewportThreshold && <div>test</div>}
     </div>
 }

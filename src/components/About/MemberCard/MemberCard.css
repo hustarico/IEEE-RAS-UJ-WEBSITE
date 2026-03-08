@@ -23,6 +23,7 @@
 .member-card * {
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
 .member-card img{
@@ -32,10 +33,12 @@
 }
 
 .member-card > .img-container{
+    transition:  0.2s;
     height: 100%;
     width:  100%;
     border-radius: 100%;
     overflow: hidden;
+
 }
 
 .member-card h4{
@@ -55,4 +58,9 @@
 /* Optional: Make the image pop out even more */
 .member-card:hover img {
     transform: translateZ(20px); /* Moves the image forward in 3D space */
+}
+
+.member-card:hover .img-container{
+    
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }

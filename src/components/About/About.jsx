@@ -9,11 +9,34 @@ import Team from './Team.jsx'
 
 
 let Teams = [
-    <Team teamName="advisor" number={1}/>,
-    <Team teamName="comittee" number={4}/>,
-    <Team teamName="leaders" number={6}/>,
-    <Team teamName="dancers" number={3}/>,
-
+    <Team teamName="advisor" team={[
+        {
+            name: "Mohammad Al Mashagbeh",
+            title: "Advisor"
+        }
+    ]}/>,
+    <Team teamName="comittee" team={[
+        {
+            name: "Yousef El Taweel",
+            title: "Chair"
+        },
+        {
+            name: "Yahia Hussunah",
+            title: "Vice"
+        },
+        {
+            name: "Omar Eshtewe",
+            title: "Treasurer"
+        },
+        {
+            name: "Hala Al Dalu",
+            title: "Secretary"
+        },
+        {
+            name: "Hussam Tarteer",
+            title: "Webmaster"
+        },
+    ]}/>,
 ]
 
 
