@@ -9,7 +9,7 @@ import TargetCursor from './components/Cursor/TargetCursor.jsx'
 function brek(j){
 	let arr = []
 	for(let i =0;i<j;i++){
-		arr[i]=<br/>
+		arr[i]=<br key={i}/>
 	}
 	return arr;
 }
@@ -20,7 +20,7 @@ function App() {
 
 			<TargetCursor 
 				spinDuration={2}
-				// hideDefaultCursor
+				hideDefaultCursor
 				parallaxOn
 				hoverDuration={0.2}
 			/>
