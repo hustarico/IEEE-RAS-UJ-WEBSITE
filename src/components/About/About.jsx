@@ -5,8 +5,7 @@ import Mission from './Mission.jsx'
 import Vision from './Vision.jsx'
 import Stats from './Stats.jsx'
 import Team from './Team.jsx'
-// import TeamsCarousel from './TeamsCarousel.jsx'
-
+import OurTeams from './OurTeams/OurTeams.jsx'
 
 let Teams = [
     <Team teamName="advisor" team={[
@@ -53,6 +52,8 @@ export default function About(){
         <div className="teams">
             {Teams.map(team=>{return team})}
         </div>
+
+        <OurTeams/>
 
     </div>
 }

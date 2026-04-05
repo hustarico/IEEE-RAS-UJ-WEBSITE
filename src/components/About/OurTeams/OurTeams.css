@@ -1,0 +1,13 @@
+.subtitle{
+
+    text-transform: uppercase;
+    
+    color: var(--text-pure);
+    background: linear-gradient(135deg, var(--ras-maroon), var(--ras-purple)) text;
+    
+}
+.subtitle >span{
+    
+    color: transparent;
+    background: linear-gradient(135deg, var(--ras-maroon), var(--ras-purple)) text;
+}

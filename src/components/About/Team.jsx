@@ -27,17 +27,7 @@ function getImgBasedOnRole(role){
     }
 }
 
-function cards(number){
-
-    
-    let arr = [];
-    for(let i =0;i<number;i++){
-        arr[i] = <MemberCard/>
-    }
-    return arr;
-}
-
-export default function Team({teamName,number,team}){
+export default function Team({teamName,team}){
 
 
 
