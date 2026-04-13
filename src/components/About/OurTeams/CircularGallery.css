@@ -5,6 +5,15 @@
   cursor: grab;
 }
 
+.circular-gallery canvas {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.circular-gallery:hover canvas {
+  filter: grayscale(0%);
+}
+
 .circular-gallery:active {
   cursor: grabbing;
 }

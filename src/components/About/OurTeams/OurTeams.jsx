@@ -6,7 +6,8 @@ import placeholderImg from './../../../assets/daNigga.png';
 
 const teamsImages = [
 
-    { image: `https://picsum.photos/seed/1/800/600?grayscale`, text: 'Bridge' },
+    { image: `https://picsum.photos/seed/1/800/600`, text: 'Bridge' },
+    { image: `https://picsum.photos/seed/3/800/600`, text: 'TEST' },
     { image: `https://picsum.photos/seed/2/800/600`, text: 'Desk Setup' },
     { image: placeholderImg, text: 'honored member'},
 ]
