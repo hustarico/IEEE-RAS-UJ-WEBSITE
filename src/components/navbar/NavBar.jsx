@@ -1,28 +1,23 @@
 import './NavBar.css'
 import logo from '../../assets/IEEE-RAS/ras-logo-custom1.png'
-import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 const NavLinks = [
     {
         name:"Home",
-        href:"/#home",
-        isRoute: false
+        href:"/#home"
     },
     {
         name:"About",
-        href:"/#about-us",
-        isRoute: false
+        href:"/#about-us"
     },
     {
         name:"Events",
-        href:"/events",
-        isRoute: true
+        href:"/events"
     },
     {
         name:"News",
-        href:"/#news",
-        isRoute: false
+        href:"/#news"
     },
 ]
 
@@ -75,11 +70,7 @@ export default function NavBar(){
             {NavLinks.map(link=>{
                 return (
                     <li key={link.name} className='cursor-target' onClick={handleNavClick}>
-                        {link.isRoute ? (
-                            <Link to={link.href}>{link.name}</Link>
-                        ) : (
-                            <a href={link.href}>{link.name}</a>
-                        )}
+                        <a href={link.href}>{link.name}</a>
                     </li>
                 )
             })}
@@ -91,15 +82,7 @@ export default function NavBar(){
             {NavLinks.map(link=>{
                 return (
                     <li key={link.name} className='cursor-target' onClick={handleNavClick}>
-                        {link.isRoute ? (
-                            <Link to={link.href} onClick={() => setIsMobileMenuOpen(false)}>
-                                {link.name}
-                            </Link>
-                        ) : (
-                            <a href={link.href} onClick={() => setIsMobileMenuOpen(false)}>
-                                {link.name}
-                            </a>
-                        )}
+                        <a href={link.href}>{link.name}</a>
                     </li>
                 )
             })}
