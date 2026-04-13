@@ -1,46 +1,50 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NavBar from './components/navbar/NavBar.jsx'
 import Hero from './components/Hero/Hero.jsx'
 import About from './components/About/About.jsx'
-// import Footer from './components/Footer/Footer.jsx'
+import EventsPage from './pages/EventsPage.jsx'
+import News from './components/News/News.jsx'
+import Footer from './components/Footer/Footer.jsx'
 
 import './index.css'
 import TargetCursor from './components/Cursor/TargetCursor.jsx'
 
-function brek(j){
-	let arr = []
-	for(let i =0;i<j;i++){
-		arr[i]=<br key={i}/>
-	}
-	return arr;
+function HomePage() {
+    return (
+        <>
+            <Hero/>
+            <About/>
+            <News/>
+        </>
+    )
 }
 
 function App() {
+    return <div className='app-container'>
+        <BrowserRouter>
+            <TargetCursor 
+                spinDuration={2}
+                hideDefaultCursor
+                parallaxOn
+                hoverDuration={0.2}
+            />
 
-		return <div className='app-container'>
+            <header>
+                <NavBar></NavBar>
+            </header>
 
-			<TargetCursor 
-				spinDuration={2}
-				hideDefaultCursor
-				parallaxOn
-				hoverDuration={0.2}
-			/>
+            <main>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/events" element={<EventsPage />} />
+                </Routes>
+            </main>
 
-			<header>
-				<NavBar></NavBar>
-			</header>
-
-			<main>
-				<Hero/>
-				<About/>
-				{
-					brek(100)
-				}
-			</main>
-
-			<footer>
-				{/* <Footer></Footer> */}
-			</footer>
-		</div>
+            <footer>
+                <Footer></Footer>
+            </footer>
+        </BrowserRouter>
+    </div>
 }
 
 export default App
