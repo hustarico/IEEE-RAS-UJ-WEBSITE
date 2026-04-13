@@ -25,7 +25,7 @@ export default function News() {
     return (
         <section className="news-section" id="news">
             <div className="news-container">
-                <h2 className="section-title">Latest <span>News</span></h2>
+                <h2 className="news-title">Latest <span>News</span></h2>
                 
                 <div className="news-flex">
                     {news.map((item, index) => (
