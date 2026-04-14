@@ -103,19 +103,21 @@
     font-family: 'Courier New', Courier, monospace;
     
 }
-.hero-card button{
+.hero-card button {
     font-family: 'Courier New', Courier, monospace;
     width: fit-content;
     font-size: 1rem;
     padding: 1rem;
     box-sizing: border-box;
     border-radius: 1rem;
-
     text-transform: uppercase;
-
-    background-color: var(--ras-maroon);
+    background: linear-gradient(135deg, var(--ras-maroon), var(--ras-purple));
     border: none;
-    color:var(--text-pure)
+    color: var(--text-pure);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* testing */
+.hero-card button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
