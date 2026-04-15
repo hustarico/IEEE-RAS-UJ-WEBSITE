@@ -105,19 +105,51 @@
 }
 .hero-card button {
     font-family: 'Courier New', Courier, monospace;
-    width: fit-content;
-    font-size: 1rem;
-    padding: 1rem;
-    box-sizing: border-box;
-    border-radius: 1rem;
+    font-size: 1.1rem;
+    padding: 1.2rem 3.5rem;
+    border-radius: 1.5rem;
     text-transform: uppercase;
-    background: linear-gradient(135deg, var(--ras-maroon), var(--ras-purple));
-    border: none;
     color: var(--text-pure);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(var(--bg-dark), var(--bg-dark)) padding-box,
+                linear-gradient(135deg, var(--ras-maroon), var(--ras-purple)) border-box;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(152, 0, 46, 0.3);
+    animation: pulseGlow 3s infinite ease-in-out;
+    
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+    --spotlight-color: rgba(255, 255, 255, 0.08);
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 15px rgba(152, 0, 46, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(82, 39, 255, 0.5), 0 0 50px rgba(152, 0, 46, 0.2); }
+}
+
+.hero-card button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), var(--spotlight-color), transparent 80%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-card button:hover::before {
+    opacity: 0.8;
 }
 
 .hero-card button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 40px rgba(82, 39, 255, 0.6);
 }
